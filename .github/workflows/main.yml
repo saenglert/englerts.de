@@ -28,7 +28,7 @@ jobs:
     - name: Install npm dependencies
       run: npm install
     - name: Run build task
-      run: npm build
+      run: npm run build
     - name: Deploy to Server
       uses: nogsantos/scp-deploy@master
       with:
