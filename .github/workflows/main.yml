@@ -30,11 +30,11 @@ jobs:
     - name: Run build task
       run: npm build
     - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "_site/"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
+      uses: nogsantos/scp-deploy@master
+      with:
+        src: ./_site/*
+        host: ${{ secrets.REMOTE_HOST }}
+        remote: ${{ secrets.REMOTE_TARGET }}
+        port: ${{ secrets.REMOTE_PORT }}
+        user: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
