@@ -30,15 +30,12 @@ img.avatar {
     height: 64px;
 }
 
-header ul li a {
-    color: var(--light-grey);
-}
-
-header ul li a:hover {
-    color: var(--lighter-grey);
-}
-
 svg.contact {
     width: 24px;
     height: 24px;
+    color: var(--lighter-grey);
+}
+
+a {
+    color: var(--green);
 }
