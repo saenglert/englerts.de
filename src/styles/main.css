@@ -1,7 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+* {
     --black: #1e1e1e;
     --dark-grey: #252526;
     --medium-grey: #333;
@@ -10,57 +11,23 @@
     --green: #6dbd57;
 }
 
-body {
+html {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    
     background-color: var(--black);
     color: var(--lighter-grey);
-    display: flex;
 }
 
 header {
     width: 220px;
-    margin: 64px;
 }
 
-header > *:first-child {
-    margin-bottom: 16px;
-}
-
-header > *:last-child {
-    margin-top:  16px;
-}
-
-header div.card {
-    display: grid;
-    grid-template-columns: 64px auto;
-    grid-template-rows: 32px;
-}
-
-header div.card img {
+img.avatar {
     width: 64px;
     height: 64px;
-    grid-column: 1 / 1;
-    grid-row: 1 / end;
-    border-radius: 50%;
-}
-
-header div.card p {
-    grid-column: 2 / 2;
-    align-self: center;
-    padding: 4px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 1.5rem;
-}
-
-header ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-header ul li {
-    list-style-type: none;
-    justify-self: center;
 }
 
 header ul li a {
@@ -71,16 +38,7 @@ header ul li a:hover {
     color: var(--lighter-grey);
 }
 
-header div.contact svg {
+svg.contact {
     width: 24px;
     height: 24px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-@media (orientation: portrait) {
-
 }
