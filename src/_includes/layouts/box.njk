@@ -1,0 +1,31 @@
+---
+layout: base.njk
+contact:
+    - { href: mailto:hello@englerts.de, id: mail }
+    - { href: https://github.com/saenglert, id: github }
+    - { href: https://www.linkedin.com/in/saenglert/, id: linkedin }
+---
+<header class="flex-shrink-0 sticky top-10">
+    <a href="/">
+        <div class="flex items-center justify-around mlr-8">
+            <img class="avatar rounded-full" src="/static/flat_avatar.png">
+            <div>
+                <p class="uppercase font-extrabold text-base">Sascha</p>
+                <p class="uppercase font-extrabold text-base">Englert</p>
+            </div>
+        </div></a>
+    <ul class="flex items-center justify-around mt-4">
+        {% for item in contact %}
+        <li class="">
+            <a target="_blank" href="{{item.href}}">
+                <svg class="contact stroke-current stroke-2">
+                    <use xlink:href="/static/feather-sprite.svg#{{item.id}}" />
+                </svg>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</header>
+<main class="mt-32">
+    {{ content | safe }}
+</main>
