@@ -21,10 +21,6 @@ body {
     color: var(--lighter-grey);
 }
 
-header {
-    width: 220px;
-}
-
 img.avatar {
     width: 64px;
     height: 64px;
